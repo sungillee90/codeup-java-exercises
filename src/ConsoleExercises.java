@@ -26,16 +26,6 @@ public class ConsoleExercises {
         String userNameInput = myScanner.nextLine();
         System.out.println("You entered: --> \"" + userNameInput + "\" <--");
 
-        System.out.printf("Enter values of length and width of Apex's class: ");
-        double userInputLenWidth = myScanner.nextDouble();
-        System.out.println("You entered: --> \"" + userInputLenWidth + "\" <--");
-        double areaApex = userInputLenWidth * userInputLenWidth;
-        System.out.println("The size of your classroom is =  \"" + areaApex + "\" units Square");
-        double perimeterApex = userInputLenWidth * 4;
-        System.out.println("The perimeter of your classroom is =  \"" + perimeterApex + "\" units");
-        double volumeApex = userInputLenWidth * userInputLenWidth * userInputLenWidth;
-        System.out.println("The perimeter of your classroom is =  \"" + volumeApex + "\" units");
-
         System.out.println("Give me the length: ");
         float length = Float.parseFloat(myScanner.nextLine());
         System.out.println("Give me the width: ");
@@ -46,6 +36,18 @@ public class ConsoleExercises {
 
         System.out.println("area = " + area);
         System.out.println("perimeter= " + perimeter);
+
+        System.out.printf("Enter values of length and width of Apex's class: ");
+        double userInputLenWidth = myScanner.nextDouble();
+        System.out.println("You entered: --> \"" + userInputLenWidth + "\" <--");
+        double areaApex = userInputLenWidth * userInputLenWidth;
+        System.out.println("The size of your classroom is =  \"" + areaApex + "\" units Square");
+        double perimeterApex = userInputLenWidth * 4;
+        System.out.println("The perimeter of your classroom is =  \"" + perimeterApex + "\" units");
+        double volumeApex = userInputLenWidth * userInputLenWidth * userInputLenWidth;
+        System.out.println("The perimeter of your classroom is =  \"" + volumeApex + "\" cubiric units");
+
+
 
     }
 }
