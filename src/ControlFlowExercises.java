@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ControlFlowExercises {
-    public static void main (String arg[]) {
+    public static void main (String[] arg) {
         // Loop Basic
 
         // While loop

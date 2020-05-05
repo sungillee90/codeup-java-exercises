@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ConsoleExercises {
-    public static void main (String arg[]){
+    public static void main (String[] arg){
         Scanner myScanner = new Scanner(System.in);
 
         double pi = 3.14159;
