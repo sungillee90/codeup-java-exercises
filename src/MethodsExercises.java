@@ -1,18 +1,20 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-//        Factorial();
-        System.out.println("Factorial test");
-        while (true) {
-            Factorial();
-            System.out.println("Do you wish to continue? [Y/N]");
-            String answer = scan.nextLine();
-            if (!answer.toLowerCase().equals("y")) {
-                break;
-            }
-        }
+        diceRolling(scan);
+////        Factorial();
+//        System.out.println("Factorial test");
+//        while (true) {
+//            Factorial();
+//            System.out.println("Do you wish to continue? [Y/N]");
+//            String answer = scan.nextLine();
+//            if (!answer.toLowerCase().equals("y")) {
+//                break;
+//            }
+//        }
 
 //        getInteger(1, 10);
 
@@ -128,5 +130,39 @@ public class MethodsExercises {
 //        }
 //        return 0;
     }
+
+    // Create an application that simulates dice rolling.
+    public static void diceRolling(Scanner scan) {
+//        System.out.println("Enter the number of sides for a pair of dice.");
+//        short n = Short.parseShort(scan.nextLine());
+//
+//        int range = n - 1 + 1;
+//        System.out.println("Roll Dice 1 = " + ((int)(Math.random() *range) + 1));
+//        System.out.println("Roll Dice 2 = " + ((int)(Math.random() *range) + 1));
+
+        while (true) {
+            System.out.println("Dice test");
+
+            System.out.println("Enter the number of sides for a pair of dice.");
+            short n = Short.parseShort(scan.nextLine());
+
+            int range = n - 1 + 1;
+            System.out.println("Roll Dice 1 = " + ((int)(Math.random() *range) + 1));
+            System.out.println("Roll Dice 2 = " + ((int)(Math.random() *range) + 1));
+
+            System.out.println("Do you wish to continue?");
+            if (!scan.nextLine().toLowerCase().equals("y")) {
+                break;
+            }
+        }
+
+        //        Scanner diceSC = new Scanner(System.in);
+        //        System.out.println("Enter the number of sides for a pair of dice.");
+        //        int userInput = diceSC.nextInt();
+        //
+        //        System.out.println("userInput = " + userInput);
+
+    }
+
 
 }
