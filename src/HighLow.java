@@ -8,12 +8,12 @@ public class HighLow {
 
     //           ( NOT RETURNING )
     public static void highLow (Scanner scan) {
-        int range = 10 - 1 + 1;
+        int range = 100 - 1 + 1;
         int numberToGuess = ((int)(Math.random() *range) + 1);
         System.out.println("numberToGuess = " + numberToGuess);
 
         while (true) {
-            System.out.println("Guess a number between 1 and 10: ");
+            System.out.println("Guess a number between 1 and 100: ");
             int userInput = Integer.parseInt(scan.nextLine());
 
             if (userInput > numberToGuess) {
