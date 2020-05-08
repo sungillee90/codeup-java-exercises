@@ -4,10 +4,19 @@ public class Circle {
 
     private double radius;
 
+    // Initializing
+    static private int countCircle = 0;
+
+
     // there is NO circle without aRadius
     // Constructor
     public Circle(double aRadius) {
         this.radius = aRadius;
+        countCircle++;
+    }
+
+    public static int getCountCircle() {
+        return countCircle;
     }
 
     // getter 라서
