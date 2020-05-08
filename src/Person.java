@@ -43,10 +43,14 @@ public class Person {
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));  //TRUE
+//        System.out.println(person1.toString());     // unique id
+//        System.out.println(person2.toString());     // unique id
 //        System.out.println(person1 == person2);   //FALSE
 
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
+//        System.out.println(person1.toString()); // same id
+//        System.out.println(person2.toString()); // same id
 //        System.out.println(person1 == person2);   //TRUE
 
 //        Person person1 = new Person("John");
