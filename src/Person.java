@@ -1,35 +1,43 @@
 // Custom data type is Person in this case.
 public class Person {
-    // 1. Object basics
-    // Creating fields
+
+    // Creating fields / property
     private String name;
 
-    // returns the person's name
+    // End of property
+    // Constructor
+    public Person(String aName) {
+        setName(aName);    // also works
+        // this.name = aName;
+    }
+
+    // returns the person's name getName method getName = get Property
+    // GETTER RETURN
     public String getName() {
-        return String.format("Hello %s!", this.name);
+        return this.name;
     }
-    // Creating Constructor
-    private Person (String name) {
-        this.name = name;
-    }
-    // changes the name property to the passed value
-    public void setName(String name) {
-        this.name = name;
+
+    // changes the name property to the passed value setName method
+    // SETTER will MOST LIKELY be VOID
+    public void setName(String aName) {
+        this.name = aName;
     }
 
     // prints a message to the console using the person's name
+    // NOT GOING TO RETURN Anything b/c it will return inside of it
     public void sayHello() {
-        System.out.println("Hello" + this.name);
+//        System.out.println("Hello" + this.name);
+        System.out.println("Hello from " + getName());    // it will work also
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person("Kim");
+        Person p1 = new Person("LEE");
         Person p2 = new Person("Sung");
         Person p3 = new Person("Jenny");
 //        me.name = "SUNG";
-        System.out.println(p1.getName());
-        System.out.println(p2.getName());
-        System.out.println(p3.getName());
+        p1.sayHello(); // since sayHello() has sout, you do NOT need sout again.
+//        System.out.println(p2.getName());
+//        System.out.println(p3.getName());
 
         // TODO 2. Understanding references
 //        Person person1 = new Person("John");
