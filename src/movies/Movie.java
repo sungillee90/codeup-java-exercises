@@ -11,7 +11,6 @@ public class Movie {
         this.category = anotherCategory;
     }
 
-
     // Create methods to access these properties and change them (getters and setters).
     // getters
     public String getName(){
