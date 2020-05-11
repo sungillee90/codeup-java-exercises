@@ -2,6 +2,20 @@ import java.util.Arrays;
 
 
 public class ArraysExercises {
+    //Create a static method named addPerson.
+    // It should accept an array of Person objects, as well as a single person object to add to the passed array.
+    // It should return an array whose length is 1 greater than the passed array,
+    // with the passed person object at the end of the array.
+    static Person[] addPerson(Person[] people, Person person){
+        Person[] newPeopleArray = new Person[people.length + 1];
+        for (int i = 0; i < people.length; i++) {
+            newPeopleArray[i] = people[i];
+        }
+        newPeopleArray[newPeopleArray.length - 1] = person;
+        return newPeopleArray;
+    }
+
+
     public static void main (String[] args) {
 
         int[] numbers = {1, 2, 3, 4, 5};
@@ -40,7 +54,7 @@ public class ArraysExercises {
 //            System.out.println(people[i].sayHello());
         }
 
-//        people = addPerson(people, new Person("Dimitri"));
+        people = addPerson(people, new Person("Dimitri"));
 
         for (Person person: people) {
 //            System.out.println(person.sayHello());
