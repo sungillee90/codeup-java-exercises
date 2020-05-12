@@ -8,6 +8,8 @@ public class ShapesTest {
         // with a width of 4 and a length of 5
 
         // Fields or variables
+
+        // Creating new instances
         Rectangle box1 = new Rectangle(5,4);
 
         System.out.println(box1.getPerimeter());

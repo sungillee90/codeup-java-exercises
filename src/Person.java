@@ -36,7 +36,7 @@ public class Person {
         Person p3 = new Person("Jenny");
 //        me.name = "SUNG";
         p1.sayHello(); // since sayHello() has sout, you do NOT need sout again.
-//        System.out.println(p2.getName());
+//        System.out.println(p2.getName()); // getName() only has return so NEEDS SOUT
 //        System.out.println(p3.getName());
 
         // TODO 2. Understanding references
