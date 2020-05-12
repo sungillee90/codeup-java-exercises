@@ -25,5 +25,15 @@ public class House {
         }
     }
 
+    public float getSquareFeet() {
+        float total = 0;
+
+        for ( Room room : rooms ) {
+            total += room.getArea();
+        }
+
+        return total;
+    }
+
 
 }

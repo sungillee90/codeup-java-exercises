@@ -15,7 +15,7 @@ public class AbsApp {
 
 
         House smallHouse = new House("123 Cool Address", "Slab", rooms);
-
+        System.out.println("House is " + smallHouse.getSquareFeet() + "sqFt");
         smallHouse.switchEverythingOff();
 
 
