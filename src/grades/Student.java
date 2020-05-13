@@ -68,6 +68,9 @@ public class Student {
         System.out.println("student3.getGradeAverage() = " + student3.getGradeAverage());
 
         // returns the average of the student's grades.
+        // student1 = 60
+        // student2 = 66.666
+        // student3 = 90
 
 
 
