@@ -7,14 +7,16 @@ public class Student {
 
         //Private properties for the student's name, and grades.
         private String name;
-        //grades property should be an todo ArrayList of integers.
+        //grades property should be an todo ArrayList of integers. int(primitive type) Integer(Wrapper Class)
         private ArrayList<Integer> grades;
+
         //constructor that sets name property, and initializes the grades property as an empty ArrayList.
-        public Student(String name) {
-            this.name = name;
+        public Student(String aName) {
+            this.name = aName;
             // todo We do [this.grades = new ArrayList<>();]
             //  so we don't waste memory initializing the array,
             //  if there no grades at first while you create Student's grades
+            // initialized
             this.grades = new ArrayList<>();
         }
 
@@ -23,7 +25,7 @@ public class Student {
 
 
 
-        // returns the student's name
+        // GETTER returns the student's name
         public String getName(){
             return this.name;
         }
@@ -39,11 +41,10 @@ public class Student {
         // returns the average of the students grades
         public double getGradeAverage(){
             double totalGrades = 0d;
-            for (Integer grades : this.grades){
-                totalGrades += grades;
+            for (Integer grade : this.grades){
+                totalGrades += grade;
             }
             return (totalGrades) / (this.grades.size());
-            // Operator '/' cannot be applied to 'java.util.ArrayList<java.lang.Integer>', 'int'
         }
 
     public static void main(String[] args) {
