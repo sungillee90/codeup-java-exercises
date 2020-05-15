@@ -22,7 +22,12 @@ public class Input {
 
     public int getInt(int min, int max) {
         System.out.println("Give me a number between " + min + " and " + max);
-        int userNumber = Integer.parseInt(scanner.nextLine()); // do NOT use nextInt();
+        int userNumber;
+        try {
+            userNumber = Integer.valueOf(this.getString()); // do NOT use nextInt();
+        } catch (NumberFormatException e) {
+            return getInt(min, max);
+        }
         if (userNumber < min || userNumber > max) {
             // recursion or use FOR Loop to give user opportunity
             System.out.println("Please try again keep in the range");
@@ -33,14 +38,18 @@ public class Input {
 
     public int getInt() {
         System.out.println("Give me an integer");
-        return Integer.parseInt(scanner.nextLine());
+        try {
+            return Integer.valueOf(this.getString());
+        } catch (NumberFormatException e) {
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
         System.out.println("Give me a decimal between " + min + " and " + max);
         double userNumber;
         try {
-            userNumber = Double.valueOf(scanner.nextLine()); // do NOT use nextInt();
+            userNumber = Double.valueOf(this.getString()); // do NOT use nextInt();
         } catch (NumberFormatException e) {
             return getDouble(min, max); // try getDouble() execution again
         }
@@ -55,11 +64,19 @@ public class Input {
     public double getDouble() {
         System.out.println("Give me an decimal: ");
         try {
-            return Double.valueOf(scanner.nextLine());
+            return Double.valueOf(this.getString());
         } catch (NumberFormatException e) {
             return getDouble(); // try getDouble() execution again
         }
-
     }
+
+//    public double getDouble(String prompt) {
+//        System.out.println(prompt);
+//        try {
+//            return Double.valueOf(scanner.nextLine());
+//        } catch (NumberFormatException e) {
+//            return getDouble(); // try getDouble() execution again
+//        }
+//    }
 
 }
