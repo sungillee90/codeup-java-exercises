@@ -38,7 +38,12 @@ public class Input {
 
     public double getDouble(double min, double max) {
         System.out.println("Give me a decimal between " + min + " and " + max);
-        double userNumber = Double.parseDouble(scanner.nextLine()); // do NOT use nextInt();
+        double userNumber;
+        try {
+            userNumber = Double.valueOf(scanner.nextLine()); // do NOT use nextInt();
+        } catch (NumberFormatException e) {
+            return getDouble(min, max); // try getDouble() execution again
+        }
         if (userNumber < min || userNumber > max) {
             // recursion or use FOR Loop to give user opportunity
             System.out.println("Please try again keep in the range");
@@ -49,7 +54,12 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Give me an decimal: ");
-        return Double.parseDouble(scanner.nextLine());
+        try {
+            return Double.valueOf(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            return getDouble(); // try getDouble() execution again
+        }
+
     }
 
 }
