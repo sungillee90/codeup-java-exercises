@@ -4,14 +4,16 @@ public class myCar {
     // Creating Fields
     public String make;
     public String model;
+    public String color;
     private int horsePower;
     private int torque;
     public boolean isManual;
 
     // Constructors
-    public myCar (String mk, String mod, int horsePower, int torque, boolean isManual) {
+    public myCar (String mk, String mod, String color, int horsePower, int torque, boolean isManual) {
         this.make = mk;
         this.model = mod;
+        this.color = color;
         this.horsePower = horsePower;
         this.torque = torque;
         this.isManual = isManual;
@@ -19,14 +21,14 @@ public class myCar {
 
     public String askWhatYourCar() {
         if (this.isManual) {
-            return String.format("It is %s %s. It has %d horsepower, and %d torque.", make, model, horsePower, torque);
+            return String.format("It is %s %s with %s color. It has %d horsepower, and %d torque.", make, model, color, horsePower, torque);
         } else {
             return ("It is not a manual tranny. :(");
         }
     }
     public static void main(String[] args) {
-        myCar moongchi = new myCar("BMW", "M2",365,369,true);
-        myCar mini = new myCar("MINI", "Cooper S",201,210,true);
+        myCar moongchi = new myCar("BMW", "M2", "white", 365,369,true);
+        myCar mini = new myCar("MINI", "Cooper S", "gray",201,210,true);
 
         System.out.println("myCar.ownerLastName = "+ myCar.ownerLastName);
         System.out.println(moongchi.askWhatYourCar());

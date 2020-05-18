@@ -27,7 +27,8 @@ public class Input {
     public int getInt(int min, int max) {
         int userNumber;
         try {
-            userNumber = Integer.valueOf(this.getString("Give me a number between " + min + " and " + max)); // do NOT use nextInt();
+            userNumber = Integer.valueOf(this.getString("Give me a number between " + min + " and " + max));
+                    // do NOT use nextInt();
         } catch (NumberFormatException e) {
             return getInt(min, max);
         }
@@ -50,7 +51,8 @@ public class Input {
     public double getDouble(double min, double max) {
         double userNumber;
         try {
-            userNumber = Double.valueOf(this.getString("Give me a decimal between " + min + " and " + max)); // do NOT use nextInt();
+            userNumber = Double.valueOf(this.getString("Give me a decimal between " + min + " and " + max));
+                        // do NOT use nextInt();
         } catch (NumberFormatException e) {
             return getDouble(min, max); // try getDouble() execution again
         }
