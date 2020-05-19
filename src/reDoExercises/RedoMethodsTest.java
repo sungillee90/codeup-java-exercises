@@ -4,6 +4,7 @@ package reDoExercises;
 // Or use OOP and extends it
 
 public class RedoMethodsTest extends RedoMethodsExercises{
+
     public static void main(String[] args) {
 
         System.out.println("Addition(5,3) = " + Addition(5, 3));
