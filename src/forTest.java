@@ -1,15 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class forTest {
 
         public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            int x = 5 * 4 % 3;
-            System.out.println(x);
-            int i = sc.nextInt();
-            System.out.println("Int: " + i);
-            String newStringmyString = sc.next();
-            System.out.println("Enther string:"+ newStringmyString);
-
+            String[] names = {"Rick", "Stacey", "Brad", "Becca"};
+            String x;
+            try {
+                x = names[100];
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Exception caught!");
+                x = "";
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                System.out.println("This will always run.");
+            }
         }
 }
