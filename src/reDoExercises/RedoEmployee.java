@@ -1,10 +1,10 @@
 package reDoExercises;
 
-public class RedoEmployee extends RedoPerson {
+public class RedoEmployee {
     private double salary;
-    public RedoEmployee(String employeeName) {
-        super(employeeName);
-    }
+//    public RedoEmployee(String employeeName) {
+//        super(employeeName);
+//    }
     public void doWork(){
         System.out.println("do Work");
     }
@@ -13,8 +13,8 @@ public class RedoEmployee extends RedoPerson {
 //        return this.name;
 //    }
 
-    @Override
-    public void sayHello() {
-        System.out.println("What can I help you?");
-    }
+//    @Override
+//    public void sayHello() {
+//        System.out.println("What can I help you?");
+//    }
 }
